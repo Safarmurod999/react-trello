@@ -54,12 +54,17 @@ const boardSlice = createSlice({
             const [movedCard] = state.columns[sourceColumnId].cards.splice(sourceIndex, 1)
             state.columns[destinationColumnId].cards.splice(destinationIndex, 0, movedCard)
             localStorage.setItem('columns', JSON.stringify(state.columns))
+        },
+        deleteColumn: (state, action) => {
+            const { columnId } = action.payload
+            delete state.columns[columnId]
+            localStorage.setItem('columns', JSON.stringify(state.columns))
         }
     }
 })
 
 
-export const { addColumn, addCard, updateCard, deleteCard, moveCard } = boardSlice.actions
+export const { addColumn, addCard, updateCard, deleteCard, moveCard, deleteColumn } = boardSlice.actions
 
 
 export default boardSlice.reducer

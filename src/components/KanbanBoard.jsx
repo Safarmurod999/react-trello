@@ -35,12 +35,12 @@ const KanbanBoard = () => {
 
     return (
         <DragDropContext onDragEnd={onDragEnd}>
-            <div className="flex overflow-x-auto p-4 space-x-4 h-full">
+            <div className="flex overflow-x-auto p-4 space-x-4 min-h-[80vh]">
                 {Object.values(columns).map((column) => (
                     <Column key={column.id} column={column} />
                 ))}
                 {isAddingColumn ? (
-                    <div className="w-72 flex-shrink-0 bg-dark-bg rounded-xl overflow-hidden p-3">
+                    <div className="w-72 flex-shrink-0 bg-dark-bg rounded-xl overflow-hidden p-3 h-[162px]">
                         <input
                             type="text"
                             value={newColumnTitle}
@@ -64,7 +64,7 @@ const KanbanBoard = () => {
                         </div>
                     </div>
                 ) : (
-                    <div>
+                    <div className='h-auto'>
                         <button
                             onClick={() => setIsAddingColumn(true)}
                             className="w-72 flex justify-start items-center gap-[5px] flex-shrink-0 p-3 bg-light-pink text-white rounded-xl hover:opacity-[0.8]"

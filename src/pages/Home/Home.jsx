@@ -7,8 +7,8 @@ const Home = () => {
         <Layout>
             <div className="min-h-full">
                 <header className="bg-dark-pink shadow">
-                    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                        <h1 className="text-3xl font-bold tracking-tight text-white">Kanban Board</h1>
+                    <div className=" bg-[#6d304d]">
+                        <h1 className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 text-xl font-bold tracking-tight text-white">Safarmurod</h1>
                     </div>
                 </header>
                 <main className='bg-dark-pink min-h-[80vh]'>
